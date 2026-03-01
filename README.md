@@ -129,7 +129,7 @@ Built as a personal portfolio piece at university — a deep-dive into advanced 
 
 
 
----danger
+---
 ## ⚠️ A Note on Copyright & Audio Files
 
 This project is a deeply passionate, fan-made tribute to Lana Del Rey, designed strictly as a personal portfolio piece to showcase advanced front-end web development, physics-based UI (Matter.js), complex animations (Framer Motion), and custom audio engineering (Web Audio API).
