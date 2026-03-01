@@ -1,0 +1,285 @@
+/* ════════════════════════════════════════════════════════
+   ArtistLibrary — Lana Del Rey "The Eras"
+   Girly · Cute · Blush · Editorial
+═══════════════════════════════════════════════════════ */
+
+.artist-library {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 32px 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ── Header ─────────────────────────────────────── */
+.library-header {
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 640px;
+}
+
+.header-byline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.library-title {
+    font-family: var(--font-display);
+    font-size: clamp(46px, 7vw, 88px);
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    line-height: 1.0;
+    margin-bottom: 14px;
+    /* Animated rose → gold → blush shimmer */
+    background: linear-gradient(120deg,
+            #fdf0e8 0%,
+            #f9a8d4 20%,
+            #fdf0e8 38%,
+            #e8547a 58%,
+            #fdf0e8 72%,
+            #fbbf24 90%,
+            #fdf0e8 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer-title 8s ease-in-out infinite;
+}
+
+@keyframes shimmer-title {
+    0% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.library-subtitle {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.header-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pink), transparent);
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+/* ── Cards Grid ─────────────────────────────────── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 290px));
+    gap: 28px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* ── Era Card — Cute Polaroid ───────────────────── */
+.artist-card {
+    position: relative;
+    background: #fff5f7;
+    /* Blush paper */
+    border-radius: 3px;
+    padding: 20px 20px 50px 20px;
+    /* thick polaroid bottom */
+    box-shadow: var(--shadow-pola);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform 0.22s cubic-bezier(.34, 1.56, .64, 1);
+    outline: none;
+}
+
+/* Alternating tilt */
+.artist-card:nth-child(1) {
+    transform: rotate(-1.5deg);
+}
+
+.artist-card:nth-child(2) {
+    transform: rotate(1.2deg);
+}
+
+.artist-card:nth-child(3) {
+    transform: rotate(-0.8deg);
+}
+
+.artist-card:nth-child(4) {
+    transform: rotate(1.8deg);
+}
+
+.artist-card:nth-child(5) {
+    transform: rotate(-1.1deg);
+}
+
+.artist-card:hover {
+    transform: rotate(0deg) scale(1.05) translateY(-10px) !important;
+    /* Subtle pink shadow on hover */
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.5), 6px 6px 0 rgba(0, 0, 0, 0.15), 0 0 0 1.5px #f9a8d430;
+    transition: transform 0.22s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.3s ease;
+}
+
+/* ── Photo area ──────────────────────────────────── */
+.card-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card-photo-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.era-symbol-large {
+    font-size: 68px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+}
+
+/* Shimmer on photo */
+.photo-shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.18) 50%,
+            rgba(255, 255, 255, 0) 60%);
+    background-size: 200% 200%;
+    animation: photo-shine 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes photo-shine {
+
+    0%,
+    100% {
+        background-position: 200% 200%;
+    }
+
+    50% {
+        background-position: -200% -200%;
+    }
+}
+
+/* ── Caption (polaroid bottom) ────────────────────── */
+.card-content {
+    padding: 0 2px;
+    color: #2d1018;
+    flex: 1;
+}
+
+.card-name {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 400;
+    color: #2d1018;
+    margin-bottom: 3px;
+    letter-spacing: 0.01em;
+    transition: color 0.3s;
+}
+
+.card-genre {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: #8a5060;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 10px;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-songs {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: #8a5060;
+    background: rgba(232, 84, 122, 0.08);
+    padding: 2px 8px;
+    border-radius: 2px;
+    border: 1px solid rgba(232, 84, 122, 0.15);
+}
+
+.card-arrow {
+    font-size: 16px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Song-count tape strips */
+.card-preview {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.preview-dot {
+    height: 2px;
+    flex: 1;
+    border-radius: 0;
+    background: rgba(232, 84, 122, 0.12);
+    transition: background-color 0.25s;
+}
+
+/* Hidden in polaroid mode */
+.card-border {
+    display: none;
+}
+
+.card-glow {
+    position: absolute;
+    inset: -50px;
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.card-avatar-wrap {
+    display: none;
+}
+
+/* ── Library hint ────────────────────────────────── */
+.library-hint {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+}
