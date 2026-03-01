@@ -104,7 +104,7 @@ Built around a **vintage film / romantic darkroom** mood:
 ## ⚙️ Run It Locally
 
 ```bash
-git clone [https://github.com/yourusername/kinetic-music-player.git](https://github.com/Kavypatel07/kinetic-music-player.git)
+git clone https://github.com/Kavypatel07/kinetic-music-player.git
 cd kinetic-music-player
 
 # Install dependencies
@@ -113,6 +113,7 @@ npm install
 # Add your audio files to:
 #   src/assets/audio/*.mp3
 #   src/assets/lyrics/*.lrc
+# Pre set up is deleted :- collect full structure for run code
 
 # Start the dev server
 npm run dev
