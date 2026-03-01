@@ -1,6 +1,6 @@
 <div align="center">
 
-# � Lana Del Rey — Kinetic Music Player
+# ♪🪄 Lana Del Rey — Kinetic Music Player
 
 *An intimate, physics-driven listening experience built for fans, by a fan.*
 
@@ -38,6 +38,7 @@ This isn't a music player. It's a **shrine** — a beautifully crafted, interact
 > Click an era and its songs burst into a physics-driven space — tumbling, drifting postcards that follow your mouse like they're drawn to you.
 
 ![Born to Die Physics Wall — Floating Song Postcards](./screenshots/physics_wall.png)
+![Animation-Perview](https://github.com/user-attachments/assets/a028fc06-5008-4c36-869e-b755206956ad)
 
 ---
 
@@ -54,10 +55,11 @@ This isn't a music player. It's a **shrine** — a beautifully crafted, interact
 > Open the lyrics view to see every line synced exactly to the timestamp. Click any line to seek to that moment. The background shifts to the song's colour story.
 
 ![Full-Screen Synced Lyrics](./screenshots/lyrics_fullscreen.png)
+![Lyrics-Perview](https://github.com/user-attachments/assets/a2626483-7b98-4bbd-9f25-c9cba1835598)
 
 ---
 
-## �️ The Five Eras
+## 5️⃣ The Five Eras
 
 | Era | Symbol | Vibe | Tracks |
 |:---|:---:|:---|:---:|
@@ -102,7 +104,7 @@ Built around a **vintage film / romantic darkroom** mood:
 ## ⚙️ Run It Locally
 
 ```bash
-git clone https://github.com/yourusername/kinetic-music-player.git
+git clone [https://github.com/yourusername/kinetic-music-player.git](https://github.com/Kavypatel07/kinetic-music-player.git)
 cd kinetic-music-player
 
 # Install dependencies
@@ -125,10 +127,25 @@ npm run dev
 
 Built as a personal portfolio piece at university — a deep-dive into advanced UI animation, physics in the browser, and the art of building interfaces that feel *alive*. Every design decision asked: *"What would Lana approve of?"*
 
+
+
+---danger
+## ⚠️ A Note on Copyright & Audio Files
+
+This project is a deeply passionate, fan-made tribute to Lana Del Rey, designed strictly as a personal portfolio piece to showcase advanced front-end web development, physics-based UI (Matter.js), complex animations (Framer Motion), and custom audio engineering (Web Audio API).
+
+To respect copyright laws and the intellectual property of Lana Del Rey and Universal Music Group, **all original `.mp3` audio files, copyrighted lyrics, and the populated SQLite database have been intentionally omitted from this public repository.** The code provided here contains the complete architectural shell and animation logic, but relies on placeholder data to prevent copyright infringement. 
+
+### How to see the fully working project:
+* **Visuals:** Please refer to the attached screenshots and GIFs below to see the cinematic "Eras" wall, the flowing UI transitions, and the vintage typewriter-style synced lyrics in action.
+* **Full Live Demo:** If you would like to see a private, local demonstration of the fully functioning app with the audio engine processing the real tracks, please feel free to reach out to me directly! 
+
+**Contact:**
+You can reach me for a demo at:
+
 🔗 [LinkedIn](#) &nbsp;·&nbsp; 🔗 [Portfolio](#) &nbsp;·&nbsp; 📧 [Email](#)
 
 ---
-
 <div align="center">
   <i>Built with ♡ and a lot of Lana on repeat.</i>
 </div>
